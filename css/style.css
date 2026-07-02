@@ -1,0 +1,282 @@
+/* =========================
+   CYBER HUB - STYLE.CSS
+   ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050816;
+    color:#ffffff;
+    overflow-x:hidden;
+    line-height:1.6;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(5,8,22,.90);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(0,217,255,.20);
+
+    box-shadow:0 4px 20px rgba(0,217,255,.08);
+
+    transition:.35s ease;
+}
+
+.logo h1{
+    color:#00d9ff;
+    font-size:2rem;
+    letter-spacing:2px;
+    text-shadow:0 0 15px rgba(0,217,255,.6);
+}
+
+.logo p{
+    color:#9fa7b8;
+    font-size:14px;
+    margin-top:4px;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+}
+
+nav a{
+    position:relative;
+    text-decoration:none;
+    color:#ffffff;
+    margin-left:30px;
+    font-size:15px;
+    font-weight:600;
+    transition:.35s ease;
+    padding-bottom:6px;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:2px;
+    background:#00d9ff;
+    box-shadow:0 0 12px #00d9ff;
+    transition:.35s ease;
+}
+
+nav a:hover{
+    color:#00d9ff;
+    text-shadow:0 0 10px rgba(0,217,255,.8);
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero{
+    min-height:85vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+.hero h2{
+    font-size:3.2rem;
+    margin-bottom:20px;
+    color:#ffffff;
+}
+
+.hero p{
+    max-width:700px;
+    color:#bfc8d8;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+button{
+    padding:15px 35px;
+
+    border:none;
+    border-radius:30px;
+
+    background:#00d9ff;
+
+    color:#000;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+button:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px #00d9ff;
+}
+
+.outline{
+    background:transparent;
+    color:#00d9ff;
+    border:2px solid #00d9ff;
+}
+
+.outline:hover{
+    background:#00d9ff;
+    color:#000;
+}
+
+/* =========================
+   FEATURES
+   ========================= */
+
+.features,
+.services,
+.stats{
+    padding:80px 8%;
+}
+
+.features h2,
+.services h2{
+    text-align:center;
+    font-size:2.3rem;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#0b1228;
+
+    border:1px solid rgba(0,217,255,.20);
+
+    border-radius:15px;
+
+    padding:30px;
+
+    transition:.35s ease;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+
+    border-color:#00d9ff;
+
+    box-shadow:0 0 25px rgba(0,217,255,.30);
+}
+
+.card h3{
+    color:#00d9ff;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#c7d1df;
+}
+
+/* =========================
+   STATS
+   ========================= */
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    flex-wrap:wrap;
+    text-align:center;
+}
+
+.stat h1{
+    color:#00d9ff;
+    font-size:3rem;
+}
+
+.stat p{
+    color:#b8c2d0;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+nav a{
+    margin:10px;
+}
+
+.hero h2{
+    font-size:2.3rem;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.stats{
+    flex-direction:column;
+    gap:35px;
+}
+
+}
