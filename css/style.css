@@ -280,3 +280,25 @@ nav a{
 }
 
 }
+/* =========================
+   CYBER BACKGROUND
+   ========================= */
+
+#cyber-bg{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity:.35;
+}
+
+header,
+.hero,
+.features,
+.services,
+.stats{
+    position:relative;
+    z-index:1;
+}
