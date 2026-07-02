@@ -157,3 +157,36 @@ function animateBackground() {
 }
 
 animateBackground();
+// ===== Animated Counter =====
+
+const counters=document.querySelectorAll(".counter");
+
+const speed=150;
+
+counters.forEach(counter=>{
+
+const update=()=>{
+
+const target=+counter.getAttribute("data-target");
+
+const count=+counter.innerText;
+
+const inc=Math.ceil(target/speed);
+
+if(count<target){
+
+counter.innerText=count+inc;
+
+setTimeout(update,15);
+
+}else{
+
+counter.innerText=target;
+
+}
+
+};
+
+update();
+
+});
